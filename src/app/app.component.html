@@ -1,0 +1,38 @@
+<!-- main page -->  
+<div id="page-wrapper">
+  
+  <!-- map part --> 
+  <div id="page-middle-wrapper">
+    <app-map></app-map>
+  </div>
+
+  <!-- right part of the main page -->  
+  <div id="page-right-wrapper">
+   
+    <!-- weather and job part -->
+    <div id="page-left-weather-wrapper">
+      <h2>What is the forecast?</h2>
+      <p>Here is the local weather forecast for the next couple of days.</p>
+      <hr />
+      <app-weather></app-weather>
+    </div>
+    <app-career></app-career>
+  </div>
+
+  <!-- left part of the main page -->
+  <div id="page-left-wrapper">
+    
+    <!-- discussion part --> 
+    <div id="page-left-disqus-wrapper">
+      <h2>Do you have something you want to discuss?</h2>
+      <p>This discussion thread is open for discussion.</p>
+      <hr />
+      <div id="disqus_thread"></div>
+    </div>
+
+    <!-- wikipedia part --> 
+    <div id="page-left-wikipedia-wrapper">
+      <app-wikipedia></app-wikipedia>
+    </div>
+  </div>
+</div>

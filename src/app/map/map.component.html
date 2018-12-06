@@ -1,0 +1,14 @@
+<agm-map [latitude]="DEFAULT_MAP_LAT" [longitude]="DEFAULT_MAP_LNG" [zoom]="DEFAULT_MAP_ZOOM">
+
+  <agm-marker *ngFor="let marker of markers; let i = index"
+                          [latitude]="marker.lat"
+                          [longitude]="marker.lang"
+                          [title]="marker.title"
+                          [visible]="true">
+
+    <agm-info-window>
+      <img src="{{marker.img}}" alt="flickr img">
+    </agm-info-window>
+  </agm-marker>
+
+</agm-map>

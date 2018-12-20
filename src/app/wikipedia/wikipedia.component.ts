@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Observable }       from 'rxjs';
+import { WikipediaService } from '../services/wikipedia.service';
 
 @Component({
   selector: 'app-wikipedia',
   templateUrl: './wikipedia.component.html',
-  styleUrls: ['./wikipedia.component.scss']
+  styleUrls: ['./wikipedia.component.scss'],
+  providers: [ WikipediaService ]
 })
-export class WikipediaComponent implements OnInit {
+export class WikipediaComponent {
+  items: Observable<string[]>;
 
-  constructor() { }
+  constructor(private wikipediaService: WikipediaService) { }
 
-  ngOnInit() {
+  search(term: string){
+    this.items = this.wikipediaService.search(term);
   }
-
 }

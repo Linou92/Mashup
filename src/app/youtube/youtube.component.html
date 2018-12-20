@@ -1,0 +1,13 @@
+<div style="background-color: rgba(255, 255, 255, 0.85098); border: 1px solid rgb(219, 219, 219); padding: 25px; margin-bottom: 25px;">
+  <h2>Want to display a YouTube Video?</h2>
+  <p>We help you to search for videos. Enter a video title, and click on the search button to display the video(s) you want.</p>
+  <hr>
+  <input #YouTubeInput placeholder="Videos" style="padding: 10px 5px; width: 100%;">
+  <button (click)="onSearch(YouTubeInput)">Search for Videos</button>
+  <div #target style="margin-top: 20px;">
+
+    <h3 *ngIf="noResult" style="margin-bottom: 15px;">No video has been found...</h3>
+    <p *ngIf="noResult" > Try a different video title and see if you have better luck.</p>
+
+  </div>
+</div>
